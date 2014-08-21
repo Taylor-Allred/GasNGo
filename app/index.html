@@ -5,9 +5,9 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/app.css">
+    <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/app.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body ng-app="gasNgoApp">
@@ -17,10 +17,10 @@
       <div class="header">
         <ul class="nav nav-pills pull-right">
           <li class="active"><a ng-href="#">Home</a></li>
-          <li><a ng-href="#">Contact</a></li>
+          <li><a ng-href="#/contact">Contact</a></li>
           <li><a ng-href="#">Log In</a></li>
         </ul>
-          <h4>Quick and Friendly Service!</h4>
+          <h4 class="slogan"><a href="/">Quick and Friendly Service!</a></h4>
       </div>
 
       <!--<div ng-include="'views/main.html'" ng-controller="MainCtrl"></div>-->
@@ -43,20 +43,18 @@
        ga('send', 'pageview');
     </script>
 
-    <!-- build:js(.) scripts/vendor.js -->
-    <!-- bower:js -->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/es5-shim/es5-shim.js"></script>
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/json3/lib/json3.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="bower_components/angular-route/angular-route.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
+    <script src="../../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../../bower_components/es5-shim/es5-shim.js"></script>
+    <script src="../../bower_components/angular/angular.js"></script>
+    <script src="../../bower_components/json3/lib/json3.js"></script>
+    <script src="../../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="../../bower_components/angular-route/angular-route.js"></script>
 
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <!-- endbuild -->
+    <script src="../../scripts/app.js"></script>
+    <script src="../../scripts/controllers/main.js"></script>
+    <script src="../../scripts/controllers/store.js"></script>
+    <script src="../../scripts/directives/arbys-page.js"></script>
+    <script src="../../scripts/directives/subway-page.js"></script>
+    <script src="../../scripts/directives/gasngo-page.js"></script>
 </body>
 </html>
