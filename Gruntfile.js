@@ -70,24 +70,26 @@ module.exports = function (grunt) {
     // The actual grunt server settings
     connect: {
       options: {
-        port: 9000,
-        // Change this to '0.0.0.0' to access the server from outside.
-        hostname: 'localhost',
+//        port: 9000,
+//        // Change this to '0.0.0.0' to access the server from outside.
+//        hostname: 'localhost',
         livereload: 35729
       },
       livereload: {
         options: {
-          open: true,
-          middleware: function (connect) {
-            return [
-              connect.static('.tmp'),
-              connect().use(
-                '/bower_components',
-                connect.static('./bower_components')
-              ),
-              connect.static(appConfig.app)
-            ];
-          }
+//          open: true,
+//          middleware: function (connect) {
+//            var middlewares = [];
+//
+//            middlewares.push(connect.static('.tmp'));
+//            middlewares.push(connect().use(
+//                '/bower_components',
+//                connect.static('./bower_components')
+//            ));
+//            middlewares.push(connect.static(appConfig.app));
+//
+//            return middlewares;
+//          }
         }
       },
       test: {
@@ -366,9 +368,9 @@ module.exports = function (grunt) {
 
 
   grunt.registerTask('serve', 'Compile then start a connect web server', function (target) {
-    if (target === 'dist') {
-      return grunt.task.run(['build', 'connect:dist:keepalive']);
-    }
+//    if (target === 'dist') {
+//      return grunt.task.run(['build', 'connect:dist:keepalive']);
+//    }
 
     grunt.task.run([
       'clean:server',

@@ -1,8 +1,28 @@
-body{
-  background-color:blue;
 
-  div:not(.foo){
-    background-color:gray;
+@media (max-width: 991px) {
+  .app-content{
+    height:300px;
   }
+}
+@media (min-width: 992px) {
+  .app-content{
+    height:600px;
+  }
+}
 
+.container-fluid{
+  height:100%;
+
+  .col-md-4{
+    height:100%;
+  }
+}
+
+.app-content{
+  position: relative;
+}
+
+.slogan a{
+  text-decoration: none !important;
+  color:black !important;
 }
