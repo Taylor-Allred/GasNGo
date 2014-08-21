@@ -1,7 +1,12 @@
 node_modules/
-bower_components/
+app/bower_components/
 *.log
 
 build/
 dist/
 .idea/
+.tmp/
+
+
+#Personal Files
+app/styles/app.css

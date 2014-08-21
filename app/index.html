@@ -5,8 +5,9 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/app.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body ng-app="gasNgoApp">
@@ -22,7 +23,8 @@
           <h4>Quick and Friendly Service!</h4>
       </div>
 
-      <div ng-include="'views/main.html'" ng-controller="MainCtrl"></div>
+      <!--<div ng-include="'views/main.html'" ng-controller="MainCtrl"></div>-->
+      <div ng-view class="app-content"></div>
 
       <div class="footer">
         <p><span class="glyphicon glyphicon-heart"></span> Gas-N-Go Beta</p>
@@ -44,9 +46,11 @@
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/json3/lib/json3.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
