@@ -48,6 +48,10 @@ module.exports = function (grunt) {
         files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
         tasks: ['newer:copy:styles', 'autoprefixer']
       },
+      stylus:{
+        files:['stylus/*.styl'],
+        tasks: ['stylus']
+      },
       gruntfile: {
         files: ['Gruntfile.js']
       },
@@ -350,6 +354,13 @@ module.exports = function (grunt) {
         configFile: 'test/karma.conf.js',
         singleRun: true
       }
+    },
+    stylus:{
+      compile:{
+        files: {
+          '<%= yeoman.app %>/styles/app.css': ['stylus/*.styl'] // 1:1 compile
+        }
+      }
     }
   });
 
@@ -365,6 +376,7 @@ module.exports = function (grunt) {
       'concurrent:server',
       'autoprefixer',
       'connect:livereload',
+      'stylus:compile',
       'watch'
     ]);
   });
