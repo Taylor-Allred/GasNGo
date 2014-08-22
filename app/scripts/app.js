@@ -27,9 +27,9 @@ angular
         .when('/store/:storeId', {
           templateUrl: '../../views/store.html',
           controller: 'StoreCtrl'
-        }).when('/', {
-          templateUrl: '../../views/contact.html',
-          controller: 'ContactCtrl'
+//        }).when('/', {
+//          templateUrl: '../../views/contact.html',
+//          controller: 'ContactCtrl'
         });
 
     // configure html5 to get links working on jsfiddle
