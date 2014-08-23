@@ -5,7 +5,7 @@ Final Project for DevMountain/Gift for Boss
 #This will contain all the steps that I plan to implement for the project
 ##While it will have later steps listed, they will not be pushed for security reasons.
 
-##Section 1: Build the Consumer side of the site
+##Section 1: Build the Consumer side of the site// Hitting about 90% Completion.  I need to gather info for hours and address info to finish up. Caveat: I would like to add some deal info on all three pages that is modifiable through the admin log in.  Can't complete that till I am finished with the login for admins.
 *Scaffold site
 
 *Add Proper Divs and areas to fill out the main and secondary pages
