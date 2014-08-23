@@ -16,14 +16,82 @@
   .col-md-4{
     height:100%;
   }
-  .arbys{
-    background-image: url('../../images/Selfie.jpg');
+  .arbys {
+    background-color: red;
+    position: relative;
+    .arbys-bg-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url('../../images/Selfie.jpg');
+      transition: opacity .3s;
+
+    }
+    .arbys-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+  .arbys:hover .arbys-bg-img{
+    opacity: .55;
+
   }
   .subway{
-    background-image: url('../../images/selfie-2.jpg');
+    background-color: green;
+    position: relative;
+    .subway-bg-img{
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url('../../images/selfie-2.jpg');
+      transition: opacity .3s;
+    }
+    .subway-content{
+      display: table-cell;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      text-decoration: none;
+      text-align: center;
+      vertical-align:middle;
+
+    }
+  }
+  .subway:hover .subway-bg-img{
+    opacity: .55;
   }
   .gasngo{
-    background-image: url('../../images/Test-image.png');
+    background-color: white;
+    position: relative;
+    .gasngo-bg-img{
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url('../../images/Test-Image.png');
+      transition: opacity .3s;
+    }
+    .gasngo-content{
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      text-decoration: none;
+    }
+  }
+  .gasngo:hover .gasngo-bg-img{
+    opacity: .55;
   }
 }
 
@@ -33,5 +101,5 @@
 
 .slogan a{
   text-decoration: none !important;
-  color:black !important;
+  color:red !important;
 }
