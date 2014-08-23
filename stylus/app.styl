@@ -25,7 +25,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background-image: url('../../images/Selfie.jpg');
+      background-image: url('../../images/rsz_1rsz_arbys-image.jpg');
       transition: opacity .3s;
 
     }
@@ -35,11 +35,17 @@
       left: 0;
       right: 0;
       bottom: 0;
+      opacity: 0;
+      transition: opacity .3s;
+
     }
   }
   .arbys:hover .arbys-bg-img{
     opacity: .55;
 
+  }
+  .arbys:hover .arbys-content{
+    opacity: 1;
   }
   .subway{
     background-color: green;
@@ -50,24 +56,25 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background-image: url('../../images/selfie-2.jpg');
+      background-image: url('../../images/Optimized-Subway-Image.jpg');
       transition: opacity .3s;
     }
     .subway-content{
-      display: table-cell;
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
       text-decoration: none;
-      text-align: center;
-      vertical-align:middle;
-
+      opacity: 0;
+      transition: opacity .3s;
     }
   }
   .subway:hover .subway-bg-img{
     opacity: .55;
+  }
+  .subway:hover .subway-content{
+    opacity: 1;
   }
   .gasngo{
     background-color: white;
@@ -78,7 +85,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background-image: url('../../images/Test-Image.png');
+      background-image: url('../../images/Final-Gas-N-Go.jpg');
       transition: opacity .3s;
     }
     .gasngo-content{
@@ -88,10 +95,15 @@
       right: 0;
       bottom: 0;
       text-decoration: none;
+      opacity: 0;
+      transition: opacity .3s;
     }
   }
   .gasngo:hover .gasngo-bg-img{
     opacity: .55;
+  }
+  .gasngo:hover .gasngo-content{
+    opacity: 1;
   }
 }
 
@@ -102,4 +114,7 @@
 .slogan a{
   text-decoration: none !important;
   color:red !important;
+}
+.test-color{
+  color: red;
 }

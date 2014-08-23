@@ -94,3 +94,13 @@
 body{
     background-color:black;
 }
+.text-color{
+    font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
+    font-size: large;
+    color: black;
+    /*vertical-align:middle;*/
+    text-align: center;
+}
+.centered{
+    margin-top: 50%;
+}
