@@ -30,6 +30,10 @@ angular
 //        }).when('/', {
 //          templateUrl: '../../views/contact.html',
 //          controller: 'ContactCtrl'
+        })
+        .when('/log-me-in', {
+          templateUrl: '../../views/log-me-in.html',
+          controller: 'LogCtrl'
         });
 
     // configure html5 to get links working on jsfiddle
