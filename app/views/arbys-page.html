@@ -22,5 +22,8 @@
         <p>We have two locations! One is located in Payson right off I-15. <!--Exit: ###.--> The other is in Green River.</p>
         <!--<p>Will post full address here once I get it.</p>-->
     </div>
+    <div ng-controller="tableCtrl">
+        <a href="#" editable-text="user.name">{{ user.name || 'empty' }}</a>
+    </div>
     <!--<div>Ask for input on what else I should put here. I would like to add the monthly deals here, but won't until I create the Login page for admins so they can modify this area at will.</div>-->
 </div>

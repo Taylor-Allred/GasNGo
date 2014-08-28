@@ -3,6 +3,8 @@ var app = express();
 var fs = require('fs');
 var path = require('path');
 
+//var myDataRef = new Firebase('https://gasngo.firebaseio.com');
+
 var bodyParser = require('body-parser');
 var port = 3000;
 

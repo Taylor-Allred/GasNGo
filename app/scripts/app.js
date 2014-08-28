@@ -9,7 +9,10 @@
  * Main module of the application.
  */
 angular
-  .module('gasNgoApp', ['ngRoute'])
+  .module('gasNgoApp', ['ngRoute', 'xeditable'])
+    .run(function(editableOptions) {
+        editableOptions.theme = 'bs3';
+    })
   .config(function($routeProvider, $locationProvider) {
     $routeProvider
         .when('/', {
