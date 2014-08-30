@@ -1,30 +1,51 @@
-<h1>You made it you sexy beast you. You can now route properly!!</h1>
+<h1 class="table-color">You made it you sexy beast you. You can now route properly!!</h1>
 <div ng-controller="table2Ctrl">
-    <table class="table table-bordered table-hover table-condensed">
+    <table class="table table-bordered table-hover table-condensed table-color">
         <tr style="font-weight: bold">
-            <td style="width:35%">Name</td>
-            <td style="width:20%">Status</td>
-            <td style="width:20%">Group</td>
-            <td style="width:25%">Edit</td>
+            <td style="width:12%">Name</td>
+            <td style="width:12%">Sunday</td>
+            <td style="width:12%">Monday</td>
+            <td style="width:12%">Tuesday</td>
+            <td style="width:12%">Wednesday</td>
+            <td style="width:12%">Friday</td>
+            <td style="width:12%">Saturday</td>
+            <td style="width:12%">Edit</td>
         </tr>
         <tr ng-repeat="user in users">
             <td>
-                <!-- editable username (text with validation) -->
-        <span editable-text="user.name" e-name="name" e-form="rowform" onbeforesave="checkName($data, user.id)" e-required>
-          {{ user.name || 'empty' }}
-        </span>
+                <span editable-text="user.name" e-name="name" e-form="rowform" e-required>
+                  {{ user.name || 'empty' }}
+                </span>
             </td>
             <td>
-                <!-- editable status (select-local) -->
-        <span editable-select="user.status" e-name="status" e-form="rowform" e-ng-options="s.value as s.text for s in statuses">
-          {{ showStatus(user) }}
-        </span>
+                <span editable-text="user.name" e-name="monday" e-form="rowform" e-ng-options="s.value as s.text for s in statuses">
+                  {{ user.name || 'empty' }}
+                </span>
             </td>
             <td>
-                <!-- editable group (select-remote) -->
-        <span editable-select="user.group" e-name="group" onshow="loadGroups()" e-form="rowform" e-ng-options="g.id as g.text for g in groups">
-          {{ showGroup(user) }}
-        </span>
+                <span editable-text="user.name" e-name="tuesday" e-form="rowform" e-ng-options="g.id as g.text for g in groups">
+                  {{ user.name || 'empty' }}
+                </span>
+            </td>
+            <td>
+                <span editable-text="user.name" e-name="name" e-form="rowform" e-required>
+                  {{ user.name || 'empty' }}
+                </span>
+            </td>
+            <td>
+                <span editable-text="user.name" e-name="name" e-form="rowform" e-required>
+                  {{ user.name || 'empty' }}
+                </span>
+            </td>
+            <td>
+                <span editable-text="user.name" e-name="name" e-form="rowform" e-required>
+                  {{ user.name || 'empty' }}
+                </span>
+            </td>
+            <td>
+                <span editable-text="user.name" e-name="name" e-form="rowform" e-required>
+                  {{ user.name || 'empty' }}
+                </span>
             </td>
             <td style="white-space: nowrap">
                 <!-- form -->
