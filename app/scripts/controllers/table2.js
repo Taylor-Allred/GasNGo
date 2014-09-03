@@ -8,30 +8,72 @@
  */
 angular
     .module('gasNgoApp')
-    .controller('table2Ctrl', function($scope, $filter, $http) {
-    $scope.users = [
-        {id: 1, name: 'awesome user1'},
-        {id: 2, name: 'awesome user2'},
-        {id: 3, name: 'awesome user3'}
-    ];
+    .controller('table2Ctrl', function($scope, $filter, $http, $firebase) {
+        var ref = new Firebase("https://gasngo.firebaseio.com/");
 
-    $scope.saveUser = function(data, id) {
-        //$scope.user not updated yet
-        angular.extend(data, {id: id});
-        return $http.post('/saveUser', data);
-    };
+        var sync = $firebase(ref);
 
-    // remove user
-    $scope.removeUser = function(index) {
-        $scope.users.splice(index, 1);
-    };
+        $scope.users = sync.$asArray();
 
-    // add user
-    $scope.addUser = function() {
-        $scope.inserted = {
-            id: $scope.users.length+1,
-            name: ''
+        // filter users to show
+        $scope.filterUser = function(user) {
+            return user.isDeleted !== true;
         };
-        $scope.users.push($scope.inserted);
-    };
-});
+
+        // mark user as deleted
+        $scope.deleteUser = function(id) {
+            var filtered = $filter('filter')($scope.users, {id: id});
+            if (filtered.length) {
+                filtered[0].isDeleted = true;
+            }
+        };
+
+        // add user
+        $scope.addUser = function() {
+            $scope.users.$add({
+                id: $scope.users.length+1,
+                name: 'change me',
+                sunday: 'change me',
+                monday: 'change me',
+                tuesday: 'change me',
+                wednesday: 'change me',
+                thursday: 'change me',
+                friday: 'change me',
+                saturday: 'change me'
+            });
+        };
+
+        // cancel all changes
+        $scope.cancel = function() {
+            for (var i = $scope.users.length; i--;) {
+                var user = $scope.users[i];
+                // undelete
+                if (user.isDeleted) {
+                    delete user.isDeleted;
+                }
+                // remove new
+                if (user.isNew) {
+                    $scope.users.$remove(i);
+                }
+            }
+        };
+
+        // save edits
+        $scope.saveTable = function() {
+            for (var i = $scope.users.length; i--;) {
+                var user = $scope.users[i];
+                // actually delete user
+                if (user.isDeleted) {
+                    $scope.users.$remove(i);
+                }
+                // mark as not new
+                if (user.isNew) {
+                    user.isNew = false;
+                }
+                if (!user.isDeleted){
+                    $scope.users.$save(user)
+                }
+            }
+        };
+
+    });

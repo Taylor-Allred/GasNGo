@@ -9,7 +9,7 @@
  * Main module of the application.
  */
 angular
-  .module('gasNgoApp', ['ngRoute', 'xeditable'])
+  .module('gasNgoApp', ['ngRoute', 'xeditable', 'firebase'])
     .run(function(editableOptions) {
         editableOptions.theme = 'bs3';
     })
