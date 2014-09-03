@@ -1,0 +1,85 @@
+<h1>Admin Page. Add, Delete, or Alter Employees schedule.</h1>
+<h1 class="table-color">Gas-N-Go Schedule</h1>
+<div ng-controller="table2Ctrl" class="table-color">
+    <form editable-form name="tableform" onaftersave="saveTable()" oncancel="cancel()">
+
+        <!-- table -->
+        <table class="table table-bordered table-hover table-condensed">
+            <tr style="font-weight: bold">
+                <td style="width:12.5%">Name</td>
+                <td style="width:12.5%" class="name-table">Sunday</td>
+                <td style="width:12.5%" class="name-table">Monday</td>
+                <td style="width:12.5%" class="name-table">Tuesday</td>
+                <td style="width:12.5%" class="name-table">Wednesday</td>
+                <td style="width:12.5%" class="name-table">Thursday</td>
+                <td style="width:12.5%" class="name-table">Friday</td>
+                <td style="width:12.5%" class="name-table">Saturday</td>
+                <td><span ng-show="tableform.$visible">Action</span></td>
+            </tr>
+            <tr ng-repeat="user in users | filter:filterUser">
+                <td>
+                    <!-- editable username (text with validation) -->
+          <span editable-text="user.name" e-form="tableform" class="name-table">
+            {{ user.name || 'empty' }}
+          </span>
+                </td>
+                <td>
+                    <!-- editable username (text with validation) -->
+          <span editable-text="user.sunday" e-form="tableform">
+            {{ user.sunday || 'empty' }}
+          </span>
+                </td>
+                <td>
+                    <!-- editable username (text with validation) -->
+          <span editable-text="user.monday" e-form="tableform">
+            {{ user.monday || 'empty' }}
+          </span>
+                </td>
+                <td>
+                    <!-- editable username (text with validation) -->
+          <span editable-text="user.tuesday" e-form="tableform">
+            {{ user.tuesday || 'empty' }}
+          </span>
+                </td>
+                <td>
+                    <!-- editable username (text with validation) -->
+          <span editable-text="user.wednesday" e-form="tableform">
+            {{ user.wednesday || 'empty' }}
+          </span>
+                </td>
+                <td>
+                    <!-- editable username (text with validation) -->
+          <span editable-text="user.thursday" e-form="tableform">
+            {{ user.thursday || 'empty' }}
+          </span>
+                </td>
+                <td>
+                    <!-- editable username (text with validation) -->
+          <span editable-text="user.friday" e-form="tableform">
+            {{ user.friday || 'empty' }}
+          </span>
+                </td>
+                <td>
+                    <!-- editable username (text with validation) -->
+          <span editable-text="user.saturday" e-form="tableform">
+            {{ user.saturday || 'empty' }}
+          </span>
+                </td>
+                <td><button type="button" ng-show="tableform.$visible" ng-click="deleteUser(user.id)" class="btn btn-danger pull-right">Del</button></td>
+            </tr>
+        </table>
+
+        <!-- buttons -->
+        <div class="btn-edit">
+            <button type="button" class="btn btn-default" ng-show="!tableform.$visible" ng-click="tableform.$show()">
+                edit
+            </button>
+        </div>
+        <div class="btn-form" ng-show="tableform.$visible">
+            <button type="button" ng-disabled="tableform.$waiting" ng-click="addUser()" class="btn btn-default pull-right">add row</button>
+            <button type="submit" ng-disabled="tableform.$waiting" class="btn btn-primary">save</button>
+            <button type="button" ng-disabled="tableform.$waiting" ng-click="tableform.$cancel()" class="btn btn-default">cancel</button>
+        </div>
+
+    </form>
+</div>

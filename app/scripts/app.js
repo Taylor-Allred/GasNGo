@@ -37,6 +37,10 @@ angular
         .when('/log-me-in', {
           templateUrl: '../../views/log-me-in.html',
           controller: 'LogCtrl'
+        })
+        .when('/admin', {
+            templateUrl:'../../views/Admin-page.html',
+            controller: 'adminCtrl'
         });
 
     // configure html5 to get links working on jsfiddle
