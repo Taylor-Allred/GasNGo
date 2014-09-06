@@ -30,9 +30,6 @@ angular
         .when('/store/:storeId', {
           templateUrl: '../../views/store.html',
           controller: 'StoreCtrl'
-//        }).when('/', {
-//          templateUrl: '../../views/contact.html',
-//          controller: 'ContactCtrl'
         })
         .when('/log-me-in', {
           templateUrl: '../../views/log-me-in.html',

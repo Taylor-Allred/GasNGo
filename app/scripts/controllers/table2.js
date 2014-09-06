@@ -32,14 +32,14 @@ angular
         $scope.addUser = function() {
             $scope.users.$add({
                 id: $scope.users.length+1,
-                name: 'change me',
-                sunday: 'change me',
-                monday: 'change me',
-                tuesday: 'change me',
-                wednesday: 'change me',
-                thursday: 'change me',
-                friday: 'change me',
-                saturday: 'change me'
+                name: '',
+                sunday: '',
+                monday: '',
+                tuesday: '',
+                wednesday: '',
+                thursday: '',
+                friday: '',
+                saturday: ''
             });
         };
 

@@ -1,2 +1,13 @@
 <h1>This is the Login Page! Hit that button!</h1>
 <p><a ng-href="/admin">Login</a></p>
+<div ng-show="auth.user">
+    <p>Hello, {{auth.user.name}}</p>
+    <button ng-click="auth.$logout()">Logout</button>
+</div>
+<div ng-hide="auth.user">
+    <p>Welcome, please log in.</p>
+    <input type="text" name="input" value="Email" ng-model="userInfo.email" placeholder="Email">
+    <input type="password" name="input" value="Password" ng-model="userInfo.password" placeholder="Password">
+    <input type="text" name="input" value="Name" ng-model="userInfo.name" placeholder="Name">
+    <input type="submit" ng-click="login()" value="Register">
+</div>
